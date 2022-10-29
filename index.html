@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/0e7272222a.js" crossorigin="anonymous"></script>
+    <title>Pro-Can</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <ul class="menu">
+                <li class="menu-item">
+                    <a href="./index.html" class="menu-link nav-link inicio">Inicio <i
+                            class="fa-sharp fa-solid fa-house"></i></a>
+                </li>
+                <li class="menu-item">
+                    <a href="html/quienes.html" class="menu-link nav-link quienes">¿Quienes somos? <i
+                            class="fa-solid fa-user-check"></i></a>
+                </li>
+                <li class="menu-item">
+                    <a href="html/donde.html" class="menu-link nav-link donde">¿Dónde estamos? <i
+                            class="fa-solid fa-map-location-dot"></i></a>
+                </li>
+                <li class="menu-item">
+                    <a href="html/metodo.html" class="menu-link nav-link nuestro">Nuestro Método <i
+                            class="fa-solid fa-dog"></i></a>
+                </li>
+                <li class="menu-item">
+                    <a href="html/contacto.html" class="menu-link nav-link contacto">Contacto <i
+                            class="fa-regular fa-address-card"></i></a>
+
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="contenedor">
+
+            <div class="letrero">
+                <h1 id="letras">Entrenamiento Canino Pro-Can </h1>
+            </div>
+
+            <div class="imagen">
+                <!-- <img src="../img/inicio.jpg" alt="Bienvenidad de perritos"> -->
+            </div>
+
+            <div class="navigation">
+                <ul>
+                    <li class="list active">
+                        <a href="#">
+                            <span class="icon">
+                                <i class="fa-regular fa-calendar-days"></i>
+                            </span>
+                            <span class="text">Citas</span>
+                        </a>
+                    </li>
+
+                    <li class="list">
+                        <a href="#">
+                            <span class="icon">
+                                <i class="fa-solid fa-image"></i>
+                            </span>
+                            <span class="text">Galería</span>
+                        </a>
+                    </li>
+
+                    <li class="list">
+                        <a href="#">
+                            <span class="icon">
+                                <i class="fa-brands fa-youtube"></i>
+                            </span>
+                            <span class="text">Videos</span>
+                        </a>
+                    </li>
+
+                    <li class="list">
+                        <a href="#">
+                            <span class="icon">
+                                <i class="fa-solid fa-comments"></i>
+                            </span>
+                            <span class="text">Comentarios</span>
+                        </a>
+                    </li>
+                    <div class="indicator"></div>
+
+                </ul>
+            </div>
+        </div>
+
+        <script>
+            const list = document.querySelectorAll('.list');
+            function activeLink() {
+                list.forEach((item) =>
+                    item.classList.remove('active'));
+                this.classList.add('active');
+            }
+            list.forEach((item) =>
+                item.addEventListener('click', activeLink))
+        </script>
+
+    </main>
+    <footer class="footer">
+        <h4>Powered by Miguel Cerezo</h4>
+    </footer>
+
+</body>
+
+</html>

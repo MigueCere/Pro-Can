@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Signika', sans-serif;
+}
+
+:root {
+    --clr: #222327;
+}
+
+body {
+    background-color: #fff;
+}
+    
+.header{
+    height: 100px;
+    background: rgb(244, 240, 240);
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    justify-items: start;
+}
+
+.nav{
+    max-width: 992px;
+    font-size: 25px;
+}
+.menu {
+    display: flex;
+    width: 992px;
+    height: 80px;
+    list-style: none;
+    text-decoration: none;
+    align-items: center;
+    justify-content:space-around;
+}
+.menu-link{
+    text-decoration: none;
+    color: black;
+}
+
+.inicio {
+    background-color: rgb(233, 164, 164);
+    padding: 30px 10px;
+}
+
+.quienes {
+    background-color: rgb(245, 221, 142);
+    padding: 30px 10px;
+
+}
+
+.donde {
+    background-color: rgb(89, 201, 177);
+    padding: 30px 10px;
+
+}
+
+.nuestro {
+    background-color: rgba(159, 72, 185, 0.475);
+    padding: 30px 10px;
+
+}
+
+.contacto {
+    background-color: rgb(255, 191, 127);
+    padding: 30px 10px;
+
+}
+
+.menu-link:hover {
+    background: rgb(244, 240, 240);
+    transition: 0.5s;
+    color: black;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-rows: 70px 265px 265px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 2fr 2fr;
+    /* background-color: rgb(82, 141, 141); */
+    grid-template-areas: "a1 a1 a1 a1 a2 a2"
+                         "a1 a1 a1 a1 a3 a3"
+                         "a1 a1 a1 a1 a4 a4";
+    justify-items:center;
+    align-items: center;
+    max-width: 992px;
+    position: relative;
+    left: 240px;
+} 
+.imagen{
+    grid-area: a1;
+    width: 100%;
+    height: 80%;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.paja-titulo{
+    grid-area: a2;
+    /* background-color:purple; */
+    font-size: 2rem;
+
+
+}
+
+.paja-contenido{
+    grid-area: a3;
+   /* background-color: blue; */
+   font-size: 0.97rem;
+   width: 86%;
+   height: 86%;
+   text-align: justify;
+}
+
+.navigation{
+    grid-area: a4;
+    background-color: black;
+    width: 86%;
+    height: 86%;
+ 
+}
+
+/* --------------------------Navegador 2----------------------------- */
+.navigation {
+    position: relative;
+    width: 400px;
+    height: 70px;
+    background: #fff;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.navigation ul {
+    display: flex;
+    width: 280px;
+}
+
+.navigation ul li {
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+}
+
+.navigation ul li a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
+
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    line-height: 75px;
+    font-size: 1.5em;
+    text-align: center;
+    transition: 0.5s;
+    color: var(--clr);
+}
+
+.navigation ul li.active a .icon {
+    transform: translateY(-35px);
+}
+
+.navigation ul li a .text {
+    position: absolute;
+    color: var(--clr);
+    font-weight: 400;
+    font-size: 0.75em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.navigation ul li.active a .text {
+    opacity: 1;
+    transform: translateY(10px);
+}
+
+.indicator {
+    position: absolute;
+    top: -33px;
+    width: 70px;
+    height: 70px;
+    height: 70px;
+    background: rgb(242, 99, 118);
+    border-radius: 50%;
+    border: 6px solid var(--clr);
+    transition: 0.5s;
+}
+
+.indicator::before {
+    content: '';
+    position: absolute;
+    top: 46.6%;
+    left: -22.7px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-top-right-radius: 25px;
+    /* box-shadow: 0px -9px 0 0 var(--clr); */
+}
+
+.indicator::After {
+    content: '';
+    position: absolute;
+    top: 46.6%;
+    right: -22.7px;
+    width: 20px;
+    height: 20px;
+    background: tra;
+    border-top-left-radius: 25px;
+    /* box-shadow: 0px -9px 0 0 var(--clr); */
+}
+
+.navigation ul li:nth-child(1).active~.indicator {
+    transform: translateX(calc(70px *0));
+}
+
+
+.navigation ul li:nth-child(2).active~.indicator {
+    transform: translateX(calc(70px *1));
+    background: rgb(243, 172, 84);
+}
+
+.navigation ul li:nth-child(3).active~.indicator {
+    transform: translateX(calc(70px *2));
+    background: rgb(108, 227, 148);
+}
+
+.navigation ul li:nth-child(4).active~.indicator {
+    transform: translateX(calc(70px*3));
+    background: rgb(99, 193, 219);
+}
+
+.navigation ul li:nth-child(5).active~.indicator {
+    transform: translateX(calc(70px *4));
+}
+/* --------------------------Fin de Navegador 2 ------------------------*/
+
+.footer {
+    text-align: center;
+}
