@@ -1,166 +1,325 @@
-@import url('https://fonts.googleapis.com/css2?family=Signika&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Signika&display=swap");
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Signika', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Signika", sans-serif;
 }
 
-:root {
-    --clr: #222327;
+.header .nav {
+  display: flex;
+  background-color: rgb(235, 229, 247);
+  justify-content: space-between;
+}
+.header .menu {
+  max-width: 992px;
+  margin: 0 auto;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  list-style: none;
+  padding: 0 1px;
+  text-align: center;
+}
+.header .menu-item {
+  padding: 40px 0px;
+  color: black;
+  width: max-content;
+}
+.header .menu-link {
+  text-decoration: none;
+  font-size: 15px;
+  color: black;
+  padding: 20px;
+}
+.header .inicio {
+  background-image: url(../img/inicio.jpg);
+  background-repeat: no-repeat;
+  background-size: 270px 100px;
+  padding: 50px 32px 25px 39px;
+  justify-content: center;
+}
+.header .quienes {
+  background-color: rgb(245, 221, 142);
+}
+.header .donde {
+  background-color: rgb(89, 201, 177);
+}
+.header .nuestro {
+  background-color: rgb(232, 177, 249);
+}
+.header .contacto {
+  background-color: rgb(255, 191, 127);
 }
 
-body {
-    background-color: #fff;
+.main .contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main .contenedor .letrero {
+  display: flex;
+  font-size: 0;
+  background-image: url(../img/inicio.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 80%;
+  height: 425px;
+  font-weight: 400;
+}
+.main .contenedor .img {
+  display: none;
 }
 
-.header {
-    height: 100px;
-    background: rgb(244, 240, 240);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-items: start;
-}
-
-.nav {
-    max-width: 992px;
-    font-size: 25px;
-}
-
-.menu {
-    display: flex;
-    width: 992px;
-    height: 80px;
-    list-style: none;
-    text-decoration: none;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.menu-link {
-    text-decoration: none;
-    color: black;
-}
-
-.inicio {
-    background-color: rgb(233, 164, 164);
-    padding: 30px 10px;
-}
-
-.quienes {
-    background-color: rgb(245, 221, 142);
-    padding: 30px 10px;
-
-}
-
-.donde {
-    background-color: rgb(89, 201, 177);
-    padding: 30px 10px;
-
-}
-
-.nuestro {
-    background-color: rgba(159, 72, 185, 0.475);
-    padding: 30px 10px;
-
-}
-
-.contacto {
-    background-color: rgb(255, 191, 127);
-    padding: 30px 10px;
-
-}
-
-.menu-link:hover {
-    background: rgb(244, 240, 240);
-    transition: 0.5s;
-    color: black;
-}
-
-
-/* --------------------------Navegador 2----------------------------- */
 .navigation {
-    position: relative;
-    width: 400px;
-    height: 70px;
-    background: #fff;
-    position: relative;
+  display: flex;
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  position: relative;
+  border-radius: 10px;
+  justify-content: center;
+  position: absolute;
+  top: 45%;
+}
+.navigation ul {
+  display: flex;
+  align-items: center;
+}
+.navigation ul li {
+  position: relative;
+  list-style: none;
+  width: 50px;
+  height: 90px;
+  z-index: 1;
+}
+.navigation ul li a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 95%;
+  text-align: center;
+  font-weight: 500;
+}
+.navigation ul li a .icon {
+  position: relative;
+  display: block;
+  line-height: 75px;
+  font-size: 1.25em;
+  text-align: center;
+  transition: 0.5s;
+  color: black;
+}
+.navigation ul li.active a .icon {
+  transform: translateY(-31px);
+}
+.navigation ul li a .text {
+  position: absolute;
+  color: black;
+  font-weight: 600;
+  font-size: 0.65em;
+  letter-spacing: 0.04em;
+  transition: 0.5s;
+  opacity: 0;
+  transform: translateY(15px);
+}
+.navigation ul li.active a .text {
+  opacity: 1;
+  transform: translateY(10px);
+}
+.navigation .indicator {
+  position: absolute;
+  top: -38px;
+  width: 45px;
+  height: 45px;
+  background: rgb(242, 99, 118);
+  border-radius: 50%;
+  transition: 0.5s;
+}
+.navigation .indicator::before {
+  content: "";
+  position: absolute;
+  top: 46.6%;
+  left: -22.7px;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border-top-right-radius: 25px;
+  /* box-shadow: 0px -9px 0 0 var(--clr); */
+}
+.navigation .indicator::After {
+  content: "";
+  position: absolute;
+  top: 46.6%;
+  right: -22.7px;
+  width: 20px;
+  height: 20px;
+  background: tra;
+  border-top-left-radius: 25px;
+  /* box-shadow: 0px -9px 0 0 var(--clr); */
+}
+.navigation ul li:nth-child(1).active ~ .indicator {
+  transform: translateX(0px);
+}
+.navigation ul li:nth-child(2).active ~ .indicator {
+  transform: translateX(50px);
+  background: rgb(243, 172, 84);
+}
+.navigation ul li:nth-child(3).active ~ .indicator {
+  transform: translateX(100px);
+  background: rgb(108, 227, 148);
+}
+.navigation ul li:nth-child(4).active ~ .indicator {
+  transform: translateX(150px);
+  background: rgb(99, 193, 219);
+}
+.navigation ul li:nth-child(5).active ~ .indicator {
+  transform: translateX(200px);
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+  .header .nav {
     display: flex;
+    background-color: rgb(235, 229, 247);
+    justify-content: center;
+  }
+  .header .menu {
+    width: 280px;
+    height: 485px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    list-style: none;
+    padding: 10px 1px;
+    text-align: center;
+  }
+  .header .menu-item {
+    padding: 30px 0px;
+    color: black;
+  }
+  .header .menu-link {
+    text-decoration: none;
+    font-size: 15px;
+    color: black;
+    padding: 20px;
+  }
+  .header .inicio {
+    background-image: url(../img/inicio.jpg);
+    background-repeat: no-repeat;
+    background-size: 270px 100px;
+    padding: 50px 41.33px 20px 41.33px;
+  }
+  .header .quienes {
+    background-color: rgb(245, 221, 142);
+    font-size: 28px;
+    padding: 20px 0px 20px 0px;
+  }
+  .header .donde {
+    background-color: rgb(89, 201, 177);
+    font-size: 28px;
+    padding: 20px 0.965px 20px 0.965px;
+  }
+  .header .nuestro {
+    background-color: rgb(232, 177, 249);
+    font-size: 28px;
+    padding: 20px 15.75px 20px 15.75px;
+  }
+  .header .contacto {
+    background-color: rgb(255, 191, 127);
+    font-size: 28px;
+    padding: 20px 59.325px 20px 59.325px;
+  }
+  .main .contenedor {
+    display: flex;
+    flex-direction: column;
+  }
+  .main .contenedor .letrero {
+    background-color: #f3abab;
+    font-size: 7px;
+    width: 100%;
+    height: 25px;
+    background-image: none;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
-}
-
-.navigation ul {
+  }
+  .navigation {
     display: flex;
-    width: 280px;
-}
-
-.navigation ul li {
+    width: 100%;
+    height: 50px;
+    background: white;
+    position: relative;
+    border-radius: 10px;
+    justify-content: center;
+  }
+  .navigation ul {
+    display: flex;
+    align-items: center;
+  }
+  .navigation ul li {
     position: relative;
     list-style: none;
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 90px;
     z-index: 1;
-}
-
-.navigation ul li a {
+  }
+  .navigation ul li a {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 100%;
+    width: 95%;
     text-align: center;
     font-weight: 500;
-}
-
-.navigation ul li a .icon {
+  }
+  .navigation ul li a .icon {
     position: relative;
     display: block;
     line-height: 75px;
-    font-size: 1.5em;
+    font-size: 1.25em;
     text-align: center;
     transition: 0.5s;
-    color: var(--clr);
-}
-
-.navigation ul li.active a .icon {
-    transform: translateY(-35px);
-}
-
-.navigation ul li a .text {
+    color: black;
+  }
+  .navigation ul li.active a .icon {
+    transform: translateY(-31px);
+  }
+  .navigation ul li a .text {
     position: absolute;
-    color: var(--clr);
-    font-weight: 400;
-    font-size: 0.75em;
-    letter-spacing: 0.05em;
+    color: black;
+    font-weight: 600;
+    font-size: 0.65em;
+    letter-spacing: 0.04em;
     transition: 0.5s;
     opacity: 0;
-    transform: translateY(20px);
-}
-
-.navigation ul li.active a .text {
+    transform: translateY(15px);
+  }
+  .navigation ul li.active a .text {
     opacity: 1;
     transform: translateY(10px);
-}
-
-.indicator {
+  }
+  .indicator {
     position: absolute;
-    top: -33px;
-    width: 70px;
-    height: 70px;
-    height: 70px;
+    top: -42px;
+    width: 45px;
+    height: 45px;
     background: rgb(242, 99, 118);
     border-radius: 50%;
-    border: 6px solid var(--clr);
     transition: 0.5s;
-}
-
-.indicator::before {
-    content: '';
+  }
+  .indicator::before {
+    content: "";
     position: absolute;
     top: 46.6%;
     left: -22.7px;
@@ -169,10 +328,9 @@ body {
     background: transparent;
     border-top-right-radius: 25px;
     /* box-shadow: 0px -9px 0 0 var(--clr); */
-}
-
-.indicator::After {
-    content: '';
+  }
+  .indicator::After {
+    content: "";
     position: absolute;
     top: 46.6%;
     right: -22.7px;
@@ -181,134 +339,29 @@ body {
     background: tra;
     border-top-left-radius: 25px;
     /* box-shadow: 0px -9px 0 0 var(--clr); */
-}
-
-.navigation ul li:nth-child(1).active~.indicator {
-    transform: translateX(calc(70px *0));
-}
-
-
-.navigation ul li:nth-child(2).active~.indicator {
-    transform: translateX(calc(70px *1));
+  }
+  .navigation ul li:nth-child(1).active ~ .indicator {
+    transform: translateX(0px);
+  }
+  .navigation ul li:nth-child(2).active ~ .indicator {
+    transform: translateX(50px);
     background: rgb(243, 172, 84);
-}
-
-.navigation ul li:nth-child(3).active~.indicator {
-    transform: translateX(calc(70px *2));
+  }
+  .navigation ul li:nth-child(3).active ~ .indicator {
+    transform: translateX(100px);
     background: rgb(108, 227, 148);
-}
-
-.navigation ul li:nth-child(4).active~.indicator {
-    transform: translateX(calc(70px*3));
+  }
+  .navigation ul li:nth-child(4).active ~ .indicator {
+    transform: translateX(150px);
     background: rgb(99, 193, 219);
-}
-
-.navigation ul li:nth-child(5).active~.indicator {
-    transform: translateX(calc(70px *4));
-}
-
-/* --------------------------Fin de Navegador 2 ------------------------*/
-.letrero {
+  }
+  .navigation ul li:nth-child(5).active ~ .indicator {
+    transform: translateX(200px);
+  }
+  .footer {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 670px;
-    width: 100%;
-    background-image: url(../img/inicio.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    text-align: center;
-    font-size: 2.5rem;
+  }
 }
 
-.navigation {
-    position: absolute;
-    top: 75%;
-    left: 35%;
-}
-
-.footer {
-    text-align: center;
-}
-
-@media only screen and (max-width:600px) {
-
-
-    .menu {
-        display: flex;
-        position: relative;
-        top: 300px;
-        flex-direction: column;
-        height: 450px;
-        /* width: 80%; */
-    }
-
-    .letrero {
-        display: flex;
-        position: absolute;
-        top: 0px;
-        left: 8%;
-        font-size: 0.6em;
-        height: 14%;
-        width: 85%;
-    }
-
-    .header{
-        background-color: #fff;
-    }
-
-    #letras{
-        position: relative;
-        top: 10.5%;
-    }
-
-
-
-    .inicio {
-        background-color: rgb(233, 164, 164);
-        height: 30px;
-        padding: 25px 70px;
-
-        /* font-size: 1.7rem; */
-    }
-
-    .quienes {
-        background-color: rgb(245, 221, 142);
-        height: 30px;
-        padding: 25px 10px;
-    }
-
-    .donde {
-        background-color: rgb(89, 201, 177);
-        height: 30px;
-        padding: 25px 10px;
-    }
-
-    .nuestro {
-        background-color: rgba(159, 72, 185, 0.475);
-        height: 30px;
-        padding: 25px 16px;
-
-
-    }
-
-    .contacto {
-        background-color: rgb(255, 191, 127);
-        height: 30px;
-        padding: 25px 55px;
-    }
-
-    .navigation {
-        position: absolute;
-        top: 640px;
-        left: 1%;
-    }
-    
-    .footer{
-        position: absolute;
-        top: 105%;
-        left: 25%;
-    }
-
-
-}
+/*# sourceMappingURL=style.css.map */

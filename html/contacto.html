@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/contacto.css">
+    <script defer src="../js/metodo.js"></script>
     <script src="https://kit.fontawesome.com/0e7272222a.js" crossorigin="anonymous"></script>
     <title>Contacto</title>
 </head>
@@ -13,37 +14,45 @@
 <body>
     <header class="header">
         <nav class="nav">
-            <ul class="menu">
-                <li class="menu-item">
-                    <a href="../index.html" class="menu-link nav-link inicio">Inicio <i
-                            class="fa-sharp fa-solid fa-house"></i></a>
-                </li>
-                <li class="menu-item">
+            <a href="../index.html" class="logo nav-link menu-link inicio">Entrenamiento Canino Pro-Can</a>
+
+            <button class="nav-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class="menu menu_visible">
+
+                <li class="menu-item uno">
                     <a href="../html/quienes.html" class="menu-link nav-link quienes">¿Quienes somos? <i
                             class="fa-solid fa-user-check"></i></a>
                 </li>
-                <li class="menu-item">
+                <li class="menu-item dos">
                     <a href="../html/donde.html" class="menu-link nav-link donde">¿Dónde estamos? <i
                             class="fa-solid fa-map-location-dot"></i></a>
                 </li>
-                <li class="menu-item">
+                <li class="menu-item tres">
                     <a href="../html/metodo.html" class="menu-link nav-link nuestro">Nuestro Método <i
                             class="fa-solid fa-dog"></i></a>
                 </li>
-                <li class="menu-item">
+                <li class="menu-item cuatro">
                     <a href="../html/contacto.html" class="menu-link nav-link contacto">Contacto <i
                             class="fa-regular fa-address-card"></i></a>
                 </li>
             </ul>
         </nav>
     </header>
-    <main class="contenedor">
-        <div class="imagen">
-            <img src="../img/contacto.jpg" alt="Búho con un sobre" class="mapachito">
-        </div>
+    <main class="main">
 
-        <div class="paja-titulo">
-            <h2>Llena el formulario para hacer contacto</h2>
+        <div class="contenedor">
+
+            <div class="paja-titulo">
+                <h2>Contacto</h2>
+            </div>
+
+            <div class="imagen">
+                <img src="../img/contacto.jpg" alt="Búho con un sobre" class="contacto">
+            </div>
+
         </div>
 
         <div class="paja-contenido">
@@ -63,8 +72,8 @@
 
                 <!--Casillas de verificación-->
                 <h3>¿Cómo consideras el carácter de tu perro?</h3>
-                <label for="carinoso"><input id="carinoso" type="checkbox" value="carinoso" name="personalidad"
-                        checked> Cariñoso </label><br>
+                <label for="carinoso"><input id="carinoso" type="checkbox" value="carinoso" name="personalidad" checked>
+                    Cariñoso </label><br>
                 <label form="perezoso"><input id="perezozo" type="checkbox" value="perezoso" name="personalidad">
                     Perezoso</label><br>
                 <label for="energico"><input id="energico" type="checkbox" value="energico " name="personalidad">
@@ -78,6 +87,8 @@
 
         </div>
 
+        <br>
+        <br>
         <div class="navigation">
             <ul>
                 <li class="list active">
@@ -88,7 +99,7 @@
                         <span class="text">Citas</span>
                     </a>
                 </li>
-    
+
                 <li class="list">
                     <a href="#">
                         <span class="icon">
@@ -97,7 +108,7 @@
                         <span class="text">Galería</span>
                     </a>
                 </li>
-    
+
                 <li class="list">
                     <a href="#">
                         <span class="icon">
@@ -106,7 +117,7 @@
                         <span class="text">Videos</span>
                     </a>
                 </li>
-    
+
                 <li class="list">
                     <a href="#">
                         <span class="icon">
@@ -116,11 +127,11 @@
                     </a>
                 </li>
                 <div class="indicator"></div>
-    
+
             </ul>
         </div>
-    
-        
+
+
 
         <script>
             const list = document.querySelectorAll('.list');
@@ -132,7 +143,7 @@
             list.forEach((item) =>
                 item.addEventListener('click', activeLink))
         </script>
-    
+
 
     </main>
     <footer class="footer">
